@@ -24,7 +24,7 @@ function Dashboard() {
     }
 
     loadExpenses();
-  }, []);
+  }, [navigate]);
 
   // 🔄 Load expenses
   const loadExpenses = async () => {
