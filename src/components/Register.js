@@ -20,10 +20,10 @@ function Register() {
 
       alert("Registration successful");
 
-      navigate("/"); // go to login
+      navigate("/"); 
 
     } catch (err) {
-      alert("User already exists or error");
+      alert(err.message);
     }
   };
 

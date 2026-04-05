@@ -7,11 +7,13 @@ export const registerUser = async (data) => {
     body: JSON.stringify(data)
   });
 
+  const text = await res.text(); 
+
   if (!res.ok) {
-    throw new Error("Register failed");
+    throw new Error(text); 
   }
 
-  return await res.text();
+  return text;
 };
 export const loginUser = async (data) => {
   const res = await fetch("https://expense-tracker-backend-td59.onrender.com/api/auth/login", {
