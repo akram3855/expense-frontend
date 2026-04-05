@@ -1,5 +1,5 @@
 export const registerUser = async (data) => {
-  const res = await fetch("http://localhost:8080/api/auth/register", {
+  const res = await fetch("https://expense-tracker-backend-td59.onrender.com/api/auth/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -14,7 +14,7 @@ export const registerUser = async (data) => {
   return await res.text();
 };
 export const loginUser = async (data) => {
-  const res = await fetch("http://localhost:8080/api/auth/login", {
+  const res = await fetch("https://expense-tracker-backend-td59.onrender.com/api/auth/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -26,6 +26,6 @@ export const loginUser = async (data) => {
     throw new Error("Login failed");
   }
 
-  return await res.text(); // ✅ MUST be text
+  return await res.text(); 
 };
 
