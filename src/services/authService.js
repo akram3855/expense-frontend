@@ -14,7 +14,7 @@ export const registerUser = async (data) => {
   return await res.text();
 };
 export const loginUser = async (data) => {
-  const res = await fetch("https://expense-tracker-backend-td59.onrender.com/api/auth/register", {
+  const res = await fetch("https://expense-tracker-backend-td59.onrender.com/api/auth/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
