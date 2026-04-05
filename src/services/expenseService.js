@@ -1,8 +1,9 @@
-// 🔥 GET EXPENSES
+const API_URL = "https://expense-tracker-backend-td59.onrender.com";
+
 export const getExpenses = async () => {
   const token = localStorage.getItem("token");
 
-  const res = await fetch("http://localhost:8080/api/expenses", {
+  const res = await fetch(`${API_URL}/api/expenses`, {
     headers: {
       Authorization: "Bearer " + token
     }
@@ -16,11 +17,10 @@ export const getExpenses = async () => {
 };
 
 
-// 🔥 DELETE EXPENSE
 export const deleteExpense = async (id) => {
   const token = localStorage.getItem("token");
 
-  await fetch(`http://localhost:8080/api/expenses/${id}`, {
+  await fetch(`${API_URL}/api/expenses/${id}`, {
     method: "DELETE",
     headers: {
       Authorization: "Bearer " + token
@@ -29,11 +29,10 @@ export const deleteExpense = async (id) => {
 };
 
 
-// 🔥 UPDATE EXPENSE
 export const updateExpense = async (id, data) => {
   const token = localStorage.getItem("token");
 
-  const res = await fetch(`http://localhost:8080/api/expenses/${id}`, {
+  const res = await fetch(`${API_URL}/api/expenses/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
