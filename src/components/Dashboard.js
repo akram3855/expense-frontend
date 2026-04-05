@@ -146,12 +146,18 @@ function Dashboard() {
           onChange={(e) => setAmount(e.target.value)}
         />
 
-        <input
-          className="border p-2 rounded-lg"
-          placeholder="Category"
+        <select
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-        />
+          className="w-full border p-2 rounded-lg mb-3"
+        >
+          <option value="">Select Category</option>
+          <option value="Food">🍔 Food</option>
+          <option value="Fashion">👕 Fashion</option>
+          <option value="Tech">💻 Tech</option>
+          <option value="Travel">✈️ Travel</option>
+          <option value="Bills">💡 Bills</option>
+        </select>
 
         <input
           className="border p-2 rounded-lg"
